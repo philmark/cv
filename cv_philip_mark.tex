@@ -1,0 +1,252 @@
+\documentclass[10pt]{article}
+
+\usepackage{fullpage}
+\usepackage[usenames,dvipsnames]{xcolor} % colored links
+\usepackage{hyperref} % links
+\usepackage[nodayofweek]{datetime} % current date
+\usepackage{amssymb}
+
+\hypersetup{
+  colorlinks=true,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=NavyBlue,%
+  urlcolor=NavyBlue,
+  breaklinks=true
+}
+\urlstyle{same}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+\pagestyle{empty}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+  \begin{changemargin}{-0.05in}{-0.05in}
+    \vspace*{-8pt}
+    \hrulefill \\
+    \vspace*{-2pt}
+  \end{changemargin}
+}
+
+\renewcommand{\section}[1]{
+  \begin{changemargin}{-0.5in}{-0.5in}
+    \normalsize \scshape{#1}\\
+    \lineover
+  \end{changemargin}
+}
+
+\newcommand{\contact}[3]{
+  \begin{changemargin}{-0.5in}{-0.5in}
+    \begin{center}
+      {\LARGE \scshape {#1}}\\ \smallskip
+      {\url{#2}}\\ \smallskip
+      {\href{mailto:#3}{#3}}\\ \smallskip
+    \end{center}
+  \end{changemargin}
+}
+
+\newcommand{\jobtitle}[3]{
+  \textbf{#1}, \emph{#2} \hfill \emph{#3}\\
+}
+
+\newcommand{\jobdescription}[1]{
+  \begin{changemargin}{0in}{0.05in}
+    \smallskip {#1} \medskip
+  \end{changemargin}
+}
+
+\newenvironment{body} {
+  \vspace{2pt}
+  \begin{changemargin}{-0.25in}{-0.5in}
+    }{
+  \end{changemargin}
+}
+
+\renewcommand{\labelitemi}{$\diamond$}
+
+\newcommand{\itemdescription}[3]{
+  \textbf{#1}, {#2} \hfill \emph{#3}\\
+  \medskip
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Philip Mark}{http://www.philipmark.net}{phil.mark@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Objective
+% \section{Personal Statement}
+% 
+% \begin{body}
+%   I am an experienced, motivated, and business-savvy software engineer with a 
+%	passion for creating great products and leading teams.
+% \end{body}
+% 
+% \medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\section{Education}
+\begin{body}
+\textbf{M.A.Sc Electrical \& Computer Engineering --- Adviser: Dr. Lutz Lampe}
+\hfill \emph{2012 -- (2014)}{} \\
+\emph{University of British Columbia}, Vancouver, BC \\
+% Thesis: ``Ethernet over Light''\\
+\medskip
+\textbf{B.Eng. Computer Engineering} \hfill \emph{2007 -- 2011} \\ \emph{McGill
+University}, Montreal, QC \\
+\end{body}
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\section{Career History}
+\begin{body}
+  \jobtitle{Software Developer Intern}{Ericsson}{Jan -- Aug 2012}
+  \jobdescription{
+    \begin{itemize}
+      \item Developed software for a SIP gateway service in Java
+      \item Implemented a Javascript library and HTML5 app for WebRTC (video
+      conferencing)
+    \end{itemize}
+  }
+	\jobtitle{NSERC/USRA Researcher}{McGill University}{Summer 2011} 
+	\jobdescription{
+    \begin{itemize}
+      \item Assisted in the investigation and implementation of a novel
+      algorithm for anomaly detection in computer networks using Matlab
+      \item See Publications section 
+    \end{itemize}
+  }
+  \jobtitle{Cellular Stack Software Developer Intern}{Blackberry (RIM)}{Winter
+  2011}
+  \jobdescription{
+    \begin{itemize}
+      \item Developed new features in embedded C for the L1 control layer of the
+      LTE/4G protocol stack (RIM Cellular Technologies group)
+    \end{itemize}
+  }
+  \jobtitle{Grader}{McGill University}{Fall 2010}
+  \jobdescription{
+    \begin{itemize}
+      \item Assisted professor in grading undergraduate students' assignments
+      and examination materials for the course \emph{Introduction to Computer
+      Engineering}
+    \end{itemize}
+  }
+  \jobtitle{Driver Software Developer Intern}{Blackberry (RIM)}{Summer 2010}
+  \jobdescription{
+    \begin{itemize}
+      \item Developed USB driver code in C and desktop tools in C++ for the USB
+      team (Operating Systems group)
+    \end{itemize}
+  }
+\end{body}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\section{Skills}
+\begin{body}
+\emph{\textbf{Programming:}}{} C, C++, Java, Matlab, Javascript/jQuery,
+HTML5/CSS, Python, VHDL (Altera Quartus \& Modelsim), ARM Assembly, MIPS 
+Assembly, \LaTeX\\
+\medskip
+\emph{\textbf{Selected Technologies:}}{} Perforce, Git, Wireshark, JMeter, cURL,
+PSPICE, LogicWorks, Visual Studios, Eclipse, Notepad++, NetBeans, MODx,
+Wordpress\\
+\end{body}
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publications
+\section{Publications}
+\begin{body}
+Z. Yao, \textbf{P. Mark}, M. Rabbat, 
+``\href{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6175122}{Anomaly
+Detection using Proximity Graph and PageRank Algorithm}'', \emph{IEEE 
+Transactions on Information Forensics and Security}, vol. 7, no 4, pp. 
+1288-1300, August 2012.
+\end{body}
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+\section{Awards and Honors}
+\begin{body}
+\itemdescription{NSERC CGS M Postgraduate Scholarship (\$17,500)}{University of 
+British Columbia, Department of Electrical and Computer Engineering}{2013 -- 
+2014}
+\itemdescription{Research Assistantship (\$8,000)}{University of British
+Columbia, Department of Electrical and Computer Engineering}{2013 -- 2014}
+\itemdescription{Graduate Support Initiative Award (\$5,000)}{University of
+British Columbia, Faculty of Graduate Studies}{2012}
+\itemdescription{Research Assistantship (\$16,500)}{University of British 
+Columbia, Department of Electrical and Computer Engineering (Dr. Lutz 
+Lampe)}{2012 -- 2013}
+\itemdescription{NSERC Undergraduate Summer Research Award (\$5,625)}{McGill 
+University, Department of Electrical and Computer Engineering (Dr. Michael 
+Rabbat)}{Summer 2011}
+\end{body}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Volunteering and Extra-Curricular Activities
+\section{Volunteering and Extra-Curricular Activities}
+\begin{body}
+\itemdescription{UBC Mafia Club}{Club executive -- Event Organizer}{2013 -- 
+2014}
+\itemdescription{2013 IEEE SmartGridComm}{Student volunteer}{Oct 22, 2013}
+\itemdescription{UBC Graduate Student Society}{Graduate student orientation
+volunteering}{Aug 29 -- 30, 2013}
+\itemdescription{Vancouver Ultimate League}{Volunteering (merchandise sale, CUC 
+2013 scorekeeping)}{June 8, Aug 14 2013}
+\itemdescription{Vancouver Ultimate League}{Captain of \emph{Floppy Discs} 
+summer team}{Summer 2013}
+\itemdescription{Technophilic Magazine}{Web developer and contributor for an
+undergraduate student technology magazine at McGill University
+(\url{http://www.technophilicmagazine.com})}{2009 -- 2011}
+\itemdescription{End Poverty Now}{Web developer for a non-profit organization 
+aimed at fighting poverty through community-led initiatives
+(\url{http://www.endpovertynow.ca})}{2009 -- 2010}
+\end{body}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hobbies and Interests
+\section{Hobbies and Interests}
+\begin{body}
+Personal: hockey, backcountry splitboarding, Ultimate, tennis, web design \\
+Research: telecommunications, protocol design
+\end{body}
+
+\vfill \hfill \today
+
+\end{document}
