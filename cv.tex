@@ -7,11 +7,11 @@
 \usepackage{amssymb}
 
 \hypersetup{
-  colorlinks=true,%
-  citecolor=black,%
-  filecolor=black,%
-  linkcolor=NavyBlue,%
+  colorlinks=true,
+  linkcolor=NavyBlue,
   urlcolor=NavyBlue,
+  linkbordercolor={0.5 0.5 1},
+  urlbordercolor={0.5 0.5 1},
   breaklinks=true
 }
 \urlstyle{same}
@@ -68,8 +68,8 @@
   \end{changemargin}
 }
 
-\newcommand{\jobtitle}[3]{
-  \textbf{#1}, \emph{#2} \hfill \emph{#3}\\
+\newcommand{\jobtitle}[4]{
+  \textbf{#1}, \emph{#2}, {(#3)} \hfill \emph{#4}\\
 }
 
 \newcommand{\jobdescription}[1]{
@@ -118,7 +118,7 @@
 \textbf{M.A.Sc Electrical \& Computer Engineering --- Adviser: Dr. Lutz Lampe}
 \hfill \emph{2012 -- (2014)}{} \\
 \emph{University of British Columbia}, Vancouver, BC \\
-% Thesis: ``Ethernet over Light''\\
+Thesis: ``Ethernet over Light''\\ % TODO: insert link
 \medskip
 \textbf{B.Eng. Computer Engineering} \hfill \emph{2007 -- 2011} \\ \emph{McGill
 University}, Montreal, QC \\
@@ -129,15 +129,15 @@ University}, Montreal, QC \\
 % Experience
 \section{Career History}
 \begin{body}
-  \jobtitle{Software Developer Intern}{Ericsson}{Jan -- Aug 2012}
+  \jobtitle{Software Developer Intern}{Ericsson}{Montreal, QC}{Jan -- Aug 2012}
   \jobdescription{
     \begin{itemize}
-      \item Developed software for a SIP gateway service in Java
+      \item Developed functionality for a SIP gateway service in Java
       \item Implemented a Javascript library and HTML5 app for WebRTC (video
       conferencing)
     \end{itemize}
   }
-	\jobtitle{NSERC/USRA Researcher}{McGill University}{Summer 2011} 
+	\jobtitle{NSERC/USRA Researcher}{McGill University}{Montreal, QC}{Summer 2011} 
 	\jobdescription{
     \begin{itemize}
       \item Assisted in the investigation and implementation of a novel
@@ -145,24 +145,24 @@ University}, Montreal, QC \\
       \item See Publications section 
     \end{itemize}
   }
-  \jobtitle{Cellular Stack Software Developer Intern}{Blackberry (RIM)}{Winter
-  2011}
+  \jobtitle{Cellular Stack Software Developer Intern}{Blackberry
+  Limited}{Waterloo, ON}{Winter 2011}
   \jobdescription{
     \begin{itemize}
       \item Developed new features in embedded C for the L1 control layer of the
-      LTE/4G protocol stack (RIM Cellular Technologies group)
+      LTE/4G protocol stack (Cellular Technologies group)
     \end{itemize}
   }
-  \jobtitle{Grader}{McGill University}{Fall 2010}
-  \jobdescription{
-    \begin{itemize}
-      \item Assisted professor in grading undergraduate students' assignments
-      and examination materials for the course \emph{Introduction to Computer
-      Engineering}
-    \end{itemize}
-  }
-  \jobtitle{Driver Software Developer Intern}{Blackberry (RIM)}{Summer 2010}
-  \jobdescription{
+%   \jobtitle{Grader}{McGill University}{Montreal, QC}{Fall 2010}
+%   \jobdescription{
+%     \begin{itemize}
+%       \item Assisted professor in grading undergraduate students' assignments
+%       and examination materials for the course \emph{Introduction to Computer
+%       Engineering}
+%     \end{itemize}
+%   }
+  \jobtitle{Driver Software Developer Intern}{Blackberry
+  Limited}{Waterloo, ON}{Summer 2010} \jobdescription{
     \begin{itemize}
       \item Developed USB driver code in C and desktop tools in C++ for the USB
       team (Operating Systems group)
@@ -175,7 +175,7 @@ University}, Montreal, QC \\
 % Skills
 \section{Skills}
 \begin{body}
-\emph{\textbf{Programming:}}{} C, C++, Java, Matlab, Javascript/jQuery,
+\emph{\textbf{Programming:}}{} C, C++, Java, MATLAB, Javascript/jQuery,
 HTML5/CSS, Python, VHDL (Altera Quartus \& Modelsim), ARM Assembly, MIPS 
 Assembly, \LaTeX\\
 \medskip
@@ -190,8 +190,8 @@ Wordpress\\
 \section{Publications}
 \begin{body}
 Z. Yao, \textbf{P. Mark}, M. Rabbat, 
-``\href{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6175122}{Anomaly
-Detection using Proximity Graph and PageRank Algorithm}'', \emph{IEEE 
+``\href{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6175122}
+{Anomaly Detection using Proximity Graph and PageRank Algorithm}'', \emph{IEEE 
 Transactions on Information Forensics and Security}, vol. 7, no 4, pp. 
 1288-1300, August 2012.
 \end{body}
@@ -212,9 +212,9 @@ British Columbia, Faculty of Graduate Studies}{2012}
 \itemdescription{Research Assistantship (\$16,500)}{University of British 
 Columbia, Department of Electrical and Computer Engineering (Dr. Lutz 
 Lampe)}{2012 -- 2013}
-\itemdescription{NSERC Undergraduate Summer Research Award (\$5,625)}{McGill 
-University, Department of Electrical and Computer Engineering (Dr. Michael 
-Rabbat)}{Summer 2011}
+\itemdescription{NSERC Undergraduate Summer Research Award (\$5,625)}{Natural 
+Sciences and Engineering Research Council of Canada (held at McGill
+University}{Summer 2011}
 \end{body}
 \medskip
 
@@ -222,15 +222,18 @@ Rabbat)}{Summer 2011}
 % Volunteering and Extra-Curricular Activities
 \section{Volunteering and Extra-Curricular Activities}
 \begin{body}
-\itemdescription{UBC Mafia Club}{Club executive -- Event Organizer}{2013 -- 
+\itemdescription{Flowerbowl 2014}{Volunteering}{June 7, 2014}
+\itemdescription{Vancouver Ultimate League}{Captain of \emph{Floppy Discs}
+Ultimate team}{Summer 2014, 2013}
+\itemdescription{UBC Mafia Club}{Club executive (Event Organizer)}{2013 -- 
 2014}
 \itemdescription{2013 IEEE SmartGridComm}{Student volunteer}{Oct 22, 2013}
 \itemdescription{UBC Graduate Student Society}{Graduate student orientation
 volunteering}{Aug 29 -- 30, 2013}
-\itemdescription{Vancouver Ultimate League}{Volunteering (merchandise sale, CUC 
-2013 scorekeeping)}{June 8, Aug 14 2013}
-\itemdescription{Vancouver Ultimate League}{Captain of \emph{Floppy Discs} 
-summer team}{Summer 2013}
+\itemdescription{Canadian Ultimate Championship (CUC) 2013}{Scorekeeping}{Aug
+14, 2013}
+\itemdescription{Vancouver Ultimate League}{Volunteering (merchandise
+sale)}{June 8, 2013}
 \itemdescription{Technophilic Magazine}{Web developer and contributor for an
 undergraduate student technology magazine at McGill University
 (\url{http://www.technophilicmag.com})}{2009 -- 2011}
@@ -244,7 +247,7 @@ aimed at fighting poverty through community-led initiatives
 % Hobbies and Interests
 \section{Hobbies and Interests}
 \begin{body}
-Personal: hockey, backcountry splitboarding, Ultimate, tennis, web design \\
+Personal: ultimate, hockey, backcountry splitboarding, tennis, web design \\
 Research: telecommunications, protocol design
 \end{body}
 
