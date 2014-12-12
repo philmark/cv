@@ -1,10 +1,11 @@
-\documentclass[10pt]{article}
+\documentclass[letterpaper]{article}
 
 \usepackage{fullpage}
 \usepackage[usenames,dvipsnames]{xcolor} % colored links
 \usepackage{hyperref} % links
 \usepackage[nodayofweek]{datetime} % current date
 \usepackage{amssymb}
+% \usepackage{showframe}
 
 \hypersetup{
   colorlinks=true,
@@ -22,9 +23,8 @@
 \topmargin=-0.25in
 \textheight=9.25in
 
-\raggedright
-
-\pagestyle{empty}
+\raggedright % left justification with no indentation
+\pagestyle{empty} % no page numbering
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
@@ -137,12 +137,12 @@ University}, Montreal, QC \\
       conferencing)
     \end{itemize}
   }
-	\jobtitle{NSERC/USRA Researcher}{McGill University}{Montreal, QC}{Summer 2011} 
+	\jobtitle{NSERC USRA Researcher}{McGill University}{Montreal, QC}{Summer 2011} 
 	\jobdescription{
     \begin{itemize}
       \item Assisted in the investigation and implementation of a novel
-      algorithm for anomaly detection in computer networks using Matlab
-      \item See Publications section 
+      algorithm for anomaly detection in computer networks using Matlab (see
+      \hyperlink{sec:publications}{Publications})
     \end{itemize}
   }
   \jobtitle{Cellular Stack Software Developer Intern}{Blackberry
@@ -171,22 +171,22 @@ University}, Montreal, QC \\
 \end{body}
 \medskip
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Skills
 \section{Skills}
 \begin{body}
 \emph{\textbf{Programming:}}{} C, C++, Java, MATLAB, Javascript/jQuery,
-HTML5/CSS, Python, VHDL (Altera Quartus \& Modelsim), ARM Assembly, MIPS 
-Assembly, \LaTeX\\
+HTML5/CSS, Python, VHDL, ARM Assembly, MIPS, Assembly, \LaTeX\\
 \medskip
-\emph{\textbf{Selected Technologies:}}{} Perforce, Git, Wireshark, JMeter, cURL,
-PSPICE, LogicWorks, Visual Studios, Eclipse, Notepad++, NetBeans, MODx,
-Wordpress\\
+\emph{\textbf{Selected Technologies:}}{} Git, Perforce, Visual Studios, Eclipse,
+Notepad++, NetBeans, Wireshark, JMeter, cURL, PSPICE, LogicWorks, Altera
+Quartus \& Modelsim, MODx, Wordpress\\
 \end{body}
 \bigskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Publications
+\hypertarget{sec:publications}{}
 \section{Publications}
 \begin{body}
 Z. Yao, \textbf{P. Mark}, M. Rabbat, 
@@ -214,7 +214,7 @@ Columbia, Department of Electrical and Computer Engineering (Dr. Lutz
 Lampe)}{2012 -- 2013}
 \itemdescription{NSERC Undergraduate Summer Research Award (\$5,625)}{Natural 
 Sciences and Engineering Research Council of Canada (held at McGill
-University}{Summer 2011}
+University)}{Summer 2011}
 \end{body}
 \medskip
 
@@ -222,18 +222,20 @@ University}{Summer 2011}
 % Volunteering and Extra-Curricular Activities
 \section{Volunteering and Extra-Curricular Activities}
 \begin{body}
-\itemdescription{Flowerbowl 2014}{Volunteering}{June 7, 2014}
+\itemdescription{BC Ultimate Society Flowerbowl 2014}{Event volunteer}{June
+7, 2014}
 \itemdescription{Vancouver Ultimate League}{Captain of \emph{Floppy Discs}
-Ultimate team}{Summer 2014, 2013}
-\itemdescription{UBC Mafia Club}{Club executive (Event Organizer)}{2013 -- 
-2014}
-\itemdescription{2013 IEEE SmartGridComm}{Student volunteer}{Oct 22, 2013}
-\itemdescription{UBC Graduate Student Society}{Graduate student orientation
-volunteering}{Aug 29 -- 30, 2013}
-\itemdescription{Canadian Ultimate Championship (CUC) 2013}{Scorekeeping}{Aug
-14, 2013}
-\itemdescription{Vancouver Ultimate League}{Volunteering (merchandise
-sale)}{June 8, 2013}
+ultimate team}{Summer 2014, 2013}
+\itemdescription{UBC Mafia Club}{Club executive (special events organizer)}{2013
+-- 2014}
+\itemdescription{IEEE SmartGridComm 2013}{Event volunteer}{Oct 22,
+2013}
+\itemdescription{UBC Graduate Student Society}{New graduate student orientation
+events volunteer}{Aug 29 -- 30, 2013}
+\itemdescription{Canadian Ultimate Championship
+2013}{Scorekeeping volunteer}{Aug 14, 2013}
+\itemdescription{Vancouver Ultimate League}{Merchandise
+sale volunteer}{June 8, 2013}
 \itemdescription{Technophilic Magazine}{Web developer and contributor for an
 undergraduate student technology magazine at McGill University
 (\url{http://www.technophilicmag.com})}{2009 -- 2011}
@@ -247,10 +249,10 @@ aimed at fighting poverty through community-led initiatives
 % Hobbies and Interests
 \section{Hobbies and Interests}
 \begin{body}
-Personal: ultimate, hockey, backcountry splitboarding, tennis, web design \\
+Personal: ultimate, hockey, backcountry splitboarding, tennis \\
 Research: telecommunications, protocol design
 \end{body}
 
-\vfill \hfill \today
+\vfill \hfill \usdate\today
 
 \end{document}
