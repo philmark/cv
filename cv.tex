@@ -4,8 +4,10 @@
 \usepackage[usenames,dvipsnames]{xcolor} % colored links
 \usepackage{hyperref} % links
 \usepackage[nodayofweek]{datetime} % current date
-\usepackage{amssymb}
+\usepackage{titlesec} % custom heading formatting
+
 % \usepackage{showframe}
+% \usepackage{layout}
 
 \hypersetup{
   colorlinks=true,
@@ -17,241 +19,176 @@
 }
 \urlstyle{same}
 
-\leftmargin=0.25in
-\oddsidemargin=0.25in
-\textwidth=6.0in
-\topmargin=-0.25in
-\textheight=9.25in
+\textwidth=6.5in
+\textheight=9in
 
-\raggedright % left justification with no indentation
+\raggedright % left alignment with no indentation
 \pagestyle{empty} % no page numbering
 
-\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DEFINITIONS FOR RESUME
-
-\newenvironment{changemargin}[2]{%
-  \begin{list}{}{%
-    \setlength{\topsep}{0pt}%
-    \setlength{\leftmargin}{#1}%
-    \setlength{\rightmargin}{#2}%
-    \setlength{\listparindent}{\parindent}%
-    \setlength{\itemindent}{\parindent}%
-    \setlength{\parsep}{\parskip}%
-  }%
-  \item[]}{\end{list}
-}
-
-\newcommand{\lineover}{
-  \begin{changemargin}{-0.05in}{-0.05in}
-    \vspace*{-8pt}
-    \hrulefill \\
-    \vspace*{-2pt}
-  \end{changemargin}
-}
-
-\renewcommand{\section}[1]{
-  \begin{changemargin}{-0.5in}{-0.5in}
-    \normalsize \scshape{#1}\\
-    \lineover
-  \end{changemargin}
-}
+\titleformat{\section}
+            {\large\scshape}
+            {\thesection.}
+            {}{}[\vspace{2pt}\titlerule]
+            
+\titlespacing*{\section}{-3pt}{0pt}{7pt}
 
 \newcommand{\contact}[3]{
-  \begin{changemargin}{-0.5in}{-0.5in}
-    \begin{center}
-      {\LARGE \scshape {#1}}\\ \smallskip
-      {\url{#2}}\\ \smallskip
-      {\href{mailto:#3}{#3}}\\ \smallskip
-    \end{center}
-  \end{changemargin}
+  \begin{center}
+    {\LARGE \textsc {#1}}\\ \smallskip
+    {\href{mailto:#2}{#2}}\\ \medskip
+    {\url{#3}}\\ \smallskip
+  \end{center}
 }
 
 \newcommand{\jobtitle}[4]{
-  \textbf{#1}, \emph{#2}, {(#3)} \hfill \emph{#4}\\
-}
-
-\newcommand{\jobdescription}[1]{
-  \begin{changemargin}{0in}{0.05in}
-    \smallskip {#1} \medskip
-  \end{changemargin}
-}
-
-\newenvironment{body} {
-  \vspace{2pt}
-  \begin{changemargin}{-0.25in}{-0.5in}
-    }{
-  \end{changemargin}
+  \textbf{#1}, \emph{#2}, {#3} \hfill \emph{#4}\\
 }
 
 \renewcommand{\labelitemi}{$\diamond$}
+\newenvironment{jobdescription}{
+  \vspace{-4pt}
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}} 
 
 \newcommand{\itemdescription}[3]{
   \textbf{#1}, {#2} \hfill \emph{#3}\\
   \medskip
 }
 
-% END RESUME DEFINITIONS
-
 \begin{document}
+% \layout % show layout page
+
+\contact{Philip Mark}{phil.mark@gmail.com}{http://www.philipmark.net}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Name
-\contact{Philip Mark}{http://www.philipmark.net}{phil.mark@gmail.com}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Objective
 % \section{Personal Statement}
-% 
-% \begin{body}
 %   I am an experienced, motivated, and business-savvy software engineer with a 
 %	passion for creating great products and leading teams.
-% \end{body}
-% 
 % \medskip
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Education
-\section{Education}
-\begin{body}
-\textbf{M.A.Sc Electrical \& Computer Engineering --- Adviser: Dr. Lutz Lampe}
-\hfill \emph{2012 -- (2014)}{} \\
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Education}
+\textbf{M.A.Sc Electrical \& Computer Engineering}
+\hfill \emph{2012 -- 2014}{} \\
 \emph{University of British Columbia}, Vancouver, BC \\
-Thesis: ``Ethernet over Light''\\ % TODO: insert link
-\medskip
-\textbf{B.Eng. Computer Engineering} \hfill \emph{2007 -- 2011} \\ \emph{McGill
-University}, Montreal, QC \\
-\end{body}
+Thesis: ``\href{http://circle.ubc.ca/}{Ethernet over Light}'' (Supervisor: Dr.
+Lutz Lampe) \\
+\medskip 
+\textbf{B.Eng. Computer Engineering} \hfill \emph{2007 -- 2011} \\
+\emph{McGill University}, Montreal, QC \\
 \bigskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Experience
-\section{Career History}
-\begin{body}
-  \jobtitle{Software Developer Intern}{Ericsson}{Montreal, QC}{Jan -- Aug 2012}
-  \jobdescription{
-    \begin{itemize}
-      \item Developed functionality for a SIP gateway service in Java
-      \item Implemented a Javascript library and HTML5 app for WebRTC (video
-      conferencing)
-    \end{itemize}
-  }
-	\jobtitle{NSERC USRA Researcher}{McGill University}{Montreal, QC}{Summer 2011} 
-	\jobdescription{
-    \begin{itemize}
-      \item Assisted in the investigation and implementation of a novel
-      algorithm for anomaly detection in computer networks using Matlab (see
-      \hyperlink{sec:publications}{Publications})
-    \end{itemize}
-  }
-  \jobtitle{Cellular Stack Software Developer Intern}{Blackberry
-  Limited}{Waterloo, ON}{Winter 2011}
-  \jobdescription{
-    \begin{itemize}
-      \item Developed new features in embedded C for the L1 control layer of the
-      LTE/4G protocol stack (Cellular Technologies group)
-    \end{itemize}
-  }
-%   \jobtitle{Grader}{McGill University}{Montreal, QC}{Fall 2010}
-%   \jobdescription{
-%     \begin{itemize}
-%       \item Assisted professor in grading undergraduate students' assignments
-%       and examination materials for the course \emph{Introduction to Computer
-%       Engineering}
-%     \end{itemize}
-%   }
-  \jobtitle{Driver Software Developer Intern}{Blackberry
-  Limited}{Waterloo, ON}{Summer 2010} \jobdescription{
-    \begin{itemize}
-      \item Developed USB driver code in C and desktop tools in C++ for the USB
-      team (Operating Systems group)
-    \end{itemize}
-  }
-\end{body}
+\section*{Career History}
+\jobtitle{Software Developer Intern}{Ericsson}{Montreal, QC}{Jan -- Aug 2012}
+\begin{jobdescription}
+  \item Developed functionality for a SIP gateway service in Java
+  \item Implemented a Javascript library and HTML5 app for WebRTC (video
+  conferencing)
+\end{jobdescription}
+
+\jobtitle{NSERC USRA Researcher}{McGill University}{Montreal, QC}{Summer 2011} 
+\begin{jobdescription}
+  \item Assisted in the investigation and implementation of a novel
+  algorithm for anomaly detection in computer networks using Matlab (see
+  \hyperlink{sec:publications}{Publications})
+\end{jobdescription}
+
+\jobtitle{Cellular Stack Software Developer Intern}{Blackberry
+Limited}{Waterloo, ON}{Winter 2011}
+\begin{jobdescription}
+  \item Developed new features in embedded C for the L1 control layer of the
+  LTE/4G protocol stack (Cellular Technologies group)
+\end{jobdescription}
+
+\jobtitle{Driver Software Developer Intern}{Blackberry
+Limited}{Waterloo, ON}{Summer 2010} 
+\begin{jobdescription}
+  \item Developed USB driver code in C and desktop tools in C++ for the USB
+  team (Operating Systems group)
+\end{jobdescription}
 \medskip
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Skills
-\section{Skills}
-\begin{body}
-\emph{\textbf{Programming:}}{} C, C++, Java, MATLAB, Javascript/jQuery,
+\section*{Skills}
+\emph{\textbf{Programming}}: C, C++, Java, MATLAB, Javascript/jQuery,
 HTML5/CSS, Python, VHDL, ARM Assembly, MIPS, Assembly, \LaTeX\\
 \medskip
-\emph{\textbf{Selected Technologies:}}{} Git, Perforce, Visual Studios, Eclipse,
+
+\emph{\textbf{Selected Technologies}}: Git, Perforce, Visual Studios, Eclipse,
 Notepad++, NetBeans, Wireshark, JMeter, cURL, PSPICE, LogicWorks, Altera
 Quartus \& Modelsim, MODx, Wordpress\\
-\end{body}
 \bigskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Publications
 \hypertarget{sec:publications}{}
-\section{Publications}
-\begin{body}
+\section*{Publications}
 Z. Yao, \textbf{P. Mark}, M. Rabbat, 
 ``\href{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6175122}
 {Anomaly Detection using Proximity Graph and PageRank Algorithm}'', \emph{IEEE 
 Transactions on Information Forensics and Security}, vol. 7, no 4, pp. 
 1288-1300, August 2012.
-\end{body}
 \bigskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Awards and Honors
-\section{Awards and Honors}
-\begin{body}
+\section*{Awards and Honors}
 \itemdescription{NSERC CGS M Postgraduate Scholarship (\$17,500)}{Natural 
 Sciences and Engineering Research Council of Canada (held at University of
 British Columbia)}{2013 -- 2014}
+
 \itemdescription{Research Assistantship (\$8,000)}{University of British
 Columbia, Department of Electrical and Computer Engineering (Dr. Lutz
 Lampe)}{2013 -- 2014}
+
 \itemdescription{Graduate Support Initiative Award (\$5,000)}{University of
 British Columbia, Faculty of Graduate Studies}{2012}
 \itemdescription{Research Assistantship (\$16,500)}{University of British 
 Columbia, Department of Electrical and Computer Engineering (Dr. Lutz 
 Lampe)}{2012 -- 2013}
+
 \itemdescription{NSERC Undergraduate Summer Research Award (\$5,625)}{Natural 
 Sciences and Engineering Research Council of Canada (held at McGill
 University)}{Summer 2011}
-\end{body}
 \medskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Volunteering and Extra-Curricular Activities
-\section{Volunteering and Extra-Curricular Activities}
-\begin{body}
-\itemdescription{BC Ultimate Society Flowerbowl 2014}{Event volunteer}{June
-7, 2014}
+\section*{Volunteering and Extra-Curricular Activities}
+\itemdescription{Flowerbowl 2014}{Event volunteer}{June 7, 2014}
+
 \itemdescription{Vancouver Ultimate League}{Captain of \emph{Floppy Discs}
-ultimate team}{Summer 2014, 2013}
+ultimate team}{Summer 2013, 2014}
+
 \itemdescription{UBC Mafia Club}{Club executive (special events organizer)}{2013
 -- 2014}
+
 \itemdescription{IEEE SmartGridComm 2013}{Event volunteer}{Oct 22,
 2013}
+
 \itemdescription{UBC Graduate Student Society}{New graduate student orientation
 events volunteer}{Aug 29 -- 30, 2013}
+
 \itemdescription{Canadian Ultimate Championship
 2013}{Scorekeeping volunteer}{Aug 14, 2013}
+
 \itemdescription{Vancouver Ultimate League}{Merchandise
 sale volunteer}{June 8, 2013}
+
 \itemdescription{Technophilic Magazine}{Web developer and contributor for an
 undergraduate student technology magazine at McGill University
 (\url{http://www.technophilicmag.com})}{2009 -- 2011}
+
 \itemdescription{End Poverty Now}{Web developer for a non-profit organization 
 aimed at fighting poverty through community-led initiatives
 (\url{http://www.endpovertynow.ca})}{2009 -- 2010}
-\end{body}
 \medskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Hobbies and Interests
-\section{Hobbies and Interests}
-\begin{body}
+\section*{Hobbies and Interests}
 Personal: ultimate, hockey, backcountry splitboarding, tennis \\
 Research: telecommunications, protocol design
-\end{body}
 
 \vfill \hfill \usdate\today
 
