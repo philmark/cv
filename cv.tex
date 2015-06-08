@@ -3,11 +3,13 @@
 \usepackage{fullpage}
 \usepackage[usenames,dvipsnames]{xcolor} % colored links
 \usepackage{hyperref} % links
-\usepackage[nodayofweek]{datetime} % current date
+\usepackage{datetime} % current date
 \usepackage{titlesec} % custom heading formatting
 
 % \usepackage{showframe}
 % \usepackage{layout}
+
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
 
 \hypersetup{
   colorlinks=true,
@@ -32,11 +34,12 @@
             
 \titlespacing*{\section}{-3pt}{0pt}{7pt}
 
-\newcommand{\contact}[3]{
+\newcommand{\contact}[4]{
   \begin{center}
     {\LARGE \textsc {#1}}\\ \smallskip
-    {\href{mailto:#2}{#2}}\\ \medskip
+    {\href{mailto:#2}{#2}}\\ \smallskip
     {\url{#3}}\\ \smallskip
+    {\url{#4}}\\ \medskip
   \end{center}
 }
 
@@ -61,24 +64,22 @@
 \begin{document}
 % \layout % show layout page
 
-\contact{Philip Mark}{phil.mark@gmail.com}{http://www.philipmark.net}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Personal Statement}
-%   I am an experienced, motivated, and business-savvy software engineer with a 
-%	passion for creating great products and leading teams.
-% \medskip
+\contact{Philip Mark}{phil.mark@gmail.com}{http://www.linkedin.com/in/phmark}
+{http://www.philipmark.net}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Education}
-\textbf{M.A.Sc Electrical \& Computer Engineering}
+\textbf{M.A.Sc. Electrical \& Computer Engineering}
 \hfill \emph{2012 -- 2014}{} \\
 \emph{University of British Columbia}, Vancouver, BC \\
 Thesis: ``\href{http://circle.ubc.ca/handle/2429/51772}{Ethernet over Light}'' 
 (Supervisor: Dr. Lutz Lampe) \\
+% GPA: 88.3 \% \\
 \medskip 
 \textbf{B.Eng. Computer Engineering} \hfill \emph{2007 -- 2011} \\
 \emph{McGill University}, Montreal, QC \\
+% GPA: 3.76/4.0 \\
+
 \bigskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,6 +111,14 @@ Limited}{Waterloo, ON}{Summer 2010}
   \item Developed USB driver code in C and desktop tools in C++ for the USB
   team (Operating Systems group)
 \end{jobdescription}
+
+% \jobtitle{Software Tester}{Volt Management Consulting}{Montreal, QC}{Summer
+% 2008}
+% \begin{jobdescription}
+%   \item Tested quality, compatibility, and compliance of software using
+%   DevTrack and DevTest, while working closely with the development team. 
+% \end{jobdescription}
+
 \medskip
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -145,14 +154,15 @@ Lampe)}{2013 -- 2014}
 
 \itemdescription{Graduate Support Initiative Award (\$5,000)}{University of
 British Columbia, Faculty of Graduate Studies}{2012}
-\itemdescription{Research Assistantship (\$16,500)}{University of British 
-Columbia, Department of Electrical and Computer Engineering (Dr. Lutz 
+
+\itemdescription{Research Assistantship (\$16,500)}{University of British
+Columbia, Department of Electrical and Computer Engineering (Dr. Lutz
 Lampe)}{2012 -- 2013}
 
 \itemdescription{NSERC Undergraduate Summer Research Award (\$5,625)}{Natural 
 Sciences and Engineering Research Council of Canada (held at McGill
 University)}{Summer 2011}
-\medskip
+\bigskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Volunteering and Extra-Curricular Activities}
@@ -183,13 +193,14 @@ undergraduate student technology magazine at McGill University
 \itemdescription{End Poverty Now}{Web developer for a non-profit organization 
 aimed at fighting poverty through community-led initiatives
 (\url{http://www.endpovertynow.ca})}{2009 -- 2010}
-\medskip
+\bigskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Hobbies and Interests}
-Personal: ultimate, hockey, backcountry splitboarding, tennis \\
+Personal: ultimate, hockey, tennis, backcountry snowboarding (AST-1 certified)
+\\
 Research: telecommunications, protocol design
 
-\vfill \hfill \usdate\today
+\vfill \hfill \monthyeardate\today
 
 \end{document}
