@@ -14,11 +14,11 @@ Experience
 Software Developer Intern, Ericsson, Montreal, QC Jan - Aug 2012
 - Developed functionality for a SIP gateway service in Java
 - Implemented a Javascript library and HTML5 app for WebRTC (video conferencing)
-NSERC USRA Researcher, McGill University, Montreal, QC Summer 2011
+NSERC USRA Researcher, McGill University, Montreal, QC May - Aug 2011
 - Assisted in the investigation and implementation of a novel algorithm for anomaly detection in computer networks using Matlab (see Publications)
-Cellular Stack Software Developer Intern, Blackberry Limited, Waterloo, ON Winter 2011
+Cellular Stack Software Developer Intern, Blackberry Limited, Waterloo, ON Jan - Apr 2011
 - Developed new features in embedded C for the L1 control layer of the LTE/4G protocol stack (Cellular Technologies group)
-Driver Software Developer Intern, Blackberry Limited, Waterloo, ON Summer 2010
+Driver Software Developer Intern, Blackberry Limited, Waterloo, ON May - Aug 2010
 - Developed USB driver code in C and desktop tools in C++ for the USB team (Operating Systems group)
 
 Skills
@@ -33,7 +33,7 @@ Awards and Honors
 - Research Assistantship ($8,000), University of British Columbia, Department of Electrical and Computer Engineering (Dr. Lutz Lampe) 2013 - 2014
 - Graduate Support Initiative Award ($5,000), University of British Columbia, Faculty of Graduate Studies 2012
 - Research Assistantship ($16,500), University of British Columbia, Department of Electrical and Computer Engineering (Dr. Lutz Lampe) 2012 - 2013
-- NSERC Undergraduate Summer Research Award ($5,625), Natural Sciences and Engineering Research Council of Canada (held at McGill University) Summer 2011
+- NSERC Undergraduate Summer Research Award ($5,625), Natural Sciences and Engineering Research Council of Canada (held at McGill University) 2011
 
 Volunteering and Extra-Curricular Activities
 - Flowerbowl 2014, Event volunteer June 7, 2014
