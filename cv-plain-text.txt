@@ -23,7 +23,7 @@ Driver Software Developer Intern, Blackberry Limited, Waterloo, ON May - Aug 201
 
 Skills
 Programming: C, C++, Java, MATLAB, Javascript/jQuery, HTML5/CSS, Python, VHDL, ARM Assembly, MIPS Assembly, LATEX
-Selected Technologies: Git, Perforce, Visual Studios, Eclipse, Notepad++, NetBeans, Wireshark, JMeter, cURL, PSPICE, LogicWorks, Altera Quartus & Modelsim, MODx, Wordpress
+Selected Technologies: Git, Perforce, Visual Studios, Eclipse, Sublime Text, Notepad++, NetBeans, Wireshark, JMeter, cURL, PSPICE, LogicWorks, Altera Quartus & Modelsim, MODx, Wordpress
 
 Publications
 Z. Yao, P. Mark, M. Rabbat, "Anomaly Detection using Proximity Graph and PageRank Algorithm", IEEE Transactions on Information Forensics and Security, vol. 7, no 4, pp. 1288-1300, August 2012.
