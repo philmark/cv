@@ -11,14 +11,15 @@ B.Eng. Computer Engineering 2007 - 2011
 McGill University, Montreal, QC
 
 Experience
-Software Developer Intern, Ericsson, Montreal, QC Jan - Aug 2012
+Agile Developer, SAP, Vancouver, BC Aug 2015
+Software Developer Intern, Ericsson, Montreal QC, Jan - Aug 2012
 - Developed functionality for a SIP gateway service in Java
 - Implemented a Javascript library and HTML5 app for WebRTC (video conferencing)
-NSERC USRA Researcher, McGill University, Montreal, QC May - Aug 2011
+NSERC USRA Researcher, McGill University, Montreal QC, May - Aug 2011
 - Assisted in the investigation and implementation of a novel algorithm for anomaly detection in computer networks using Matlab (see Publications)
-Cellular Stack Software Developer Intern, Blackberry Limited, Waterloo, ON Jan - Apr 2011
+Cellular Stack Software Developer Intern, Blackberry Limited, Waterloo ON, Jan - Apr 2011
 - Developed new features in embedded C for the L1 control layer of the LTE/4G protocol stack (Cellular Technologies group)
-Driver Software Developer Intern, Blackberry Limited, Waterloo, ON May - Aug 2010
+Driver Software Developer Intern, Blackberry Limited, Waterloo ON, May - Aug 2010
 - Developed USB driver code in C and desktop tools in C++ for the USB team (Operating Systems group)
 
 Skills
